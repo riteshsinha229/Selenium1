@@ -21,20 +21,22 @@ public class TC03 {
 	}
 	
 	@Test
-	public void atTest(){
+	public void atTest() throws InterruptedException{
 		driver.get(url);
 		
 		//Select Value from drop down
 		//new Select(driver.findElement(By.id("ddlDomain"))).selectByIndex(4);  //Geo
 		
-		new Select(driver.findElement(By.id("ddlDomain"))).selectByValue("HCLISD");
+		//new Select(driver.findElement(By.id("ddlDomain"))).selectByValue("HCLISD");
 		
-		//new Select(driver.findElement(By.id("ddlDomain"))).selectByVisibleText("HCLTECH");
+		new Select(driver.findElement(By.id("ddlDomain"))).selectByVisibleText("HCLTECH");
+		
+		Thread.sleep(5000);
 	}
 	
 	@After
 	public void atAfter(){
-		//driver.quit();
+		driver.quit();
 	}
 	
 }

@@ -21,6 +21,7 @@ public class TC01 extends LCB{
 		Iterator<String> Itr = mySet.iterator();
 		List<String> myL = new ArrayList<String>();
 		
+		//while(Itr.hasNext())
 		for(int i = 0; i<mySet.size(); i++){
 			
 			myL.add(Itr.next());
